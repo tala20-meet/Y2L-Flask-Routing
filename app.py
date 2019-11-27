@@ -13,7 +13,7 @@ def home():
 
 @app.route('/store.html')
 def store():
-	return render_template('store.html')
+	return render_template('store.html', products = product)
 
 @app.route('/cart.html')
 def cart():

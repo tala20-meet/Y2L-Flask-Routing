@@ -16,8 +16,8 @@ def add_product(name,price,picture_link,description)
 	        name=name,
 	        price=price,
 	        picture_link=picture_link)
-	    session.add(product_object)
-	    session.commit()
+	session.add(product_object)
+	session.commit()
 
 def update_product(name,price,picture_link,description,id):
    
@@ -41,6 +41,11 @@ def product_query():
 def specific_product(by_id)
 	return session.query(Product).filter_by(id=their_id)
 
+
+def add_to_cart(ProductID)
+	ProductID_object=cart(ProductID=ProductID)
+	session.add(ProductID_object)
+	session.commit()
 
 
 
