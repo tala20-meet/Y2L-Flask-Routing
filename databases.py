@@ -11,7 +11,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 #part3-2
-def add_product(name,price,picture_link,description)
+def add_product(name,price,picture_link,description):
 	product_object = Product(
 	        name=name,
 	        price=price,
@@ -38,14 +38,18 @@ def product_query():
 	product = session.query(product).all()
 	return product
 
-def specific_product(by_id)
+def specific_product(by_id):
 	return session.query(Product).filter_by(id=their_id)
 
 
-def add_to_cart(ProductID)
+def add_to_cart(ProductID):
 	ProductID_object=cart(ProductID=ProductID)
 	session.add(ProductID_object)
 	session.commit()
+
+def query_all():
+	products=session.query(Product).all()
+	return products
 
 
 

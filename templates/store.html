@@ -84,14 +84,16 @@
   <p></p>
   <p><button><a href="/add_cart/{{product.id}}">Add to Cart</a></button></p>
 </div>
-{% for p in Products %}
+
+
+{% for p in Product %}
 <div class= "card">
   <h1>{{p.name}}</h1>
   <p class="price">Adopt</p>
   <img src="Picture_Link">
   <p class="Description"> {{p.Description}}</p>
 </div>
-{% endfor %}
+{% endfor %}  
 <br>
 <br>
 </body>
